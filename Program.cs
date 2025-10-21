@@ -1,51 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
+using System.IO.Compression;
 
-class Student
+
+class Car
 {
-    public string Name { get; set; }
-    public string Roll { get; set; }
-    public string Section { get; set; }
 
-    public void Display()
+    public string Brand;
+    public string model;
+    public string price;
+    public void display()
     {
-        Console.WriteLine($"Name: {Name}, Roll: {Roll}, Section: {Section}");
-    }
-}
+        Console.WriteLine(" car info");
+        Console.WriteLine("brand;" + Brand);
+        Console.WriteLine("Modle:" + model);
+        Console.WriteLine("price:" + price);
 
+    }
 class Program
-{
-    static void Main()
     {
-        var students = new List<Student>();
-        Console.Write("How many students: ");
-        if (!int.TryParse(Console.ReadLine(), out int n) || n <= 0)
+        static void Main()
         {
-            Console.WriteLine("Invalid number.");
-            return;
-        }
+            Car mycar = new Car();
+            Console.Write("enter your Brand");
 
-        for (int i = 0; i < n; i++)
-        {
-            Console.WriteLine($"\nStudent {i + 1}:");
-            Console.Write("Name: ");
-            string name = Console.ReadLine() ?? "";
+            mycar.Brand = Console.ReadLine();
 
-            Console.Write("Roll: ");
-            string roll = Console.ReadLine() ?? "";
 
-            Console.Write("Section: ");
-            string section = Console.ReadLine() ?? "";
+            Console.Write("enter your model");
+            mycar.model = Console.ReadLine();
 
-            students.Add(new Student { Name = name, Roll = roll, Section = section });
-        }
+            Console.Write("enter your price");
+            mycar.price = Console.ReadLine();
 
-        Console.WriteLine("\nStudent Details:");
-        foreach (var s in students)
-        {
-            s.Display();
+            mycar.display();
+            
         }
     }
 }
-    
-

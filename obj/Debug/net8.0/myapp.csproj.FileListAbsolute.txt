@@ -12,3 +12,4 @@
 /home/nishat/myapp/obj/Debug/net8.0/myapp.pdb
 /home/nishat/myapp/obj/Debug/net8.0/myapp.genruntimeconfig.cache
 /home/nishat/myapp/obj/Debug/net8.0/ref/myapp.dll
+/home/nishat/myapp/obj/Debug/net8.0/myapp.sourcelink.json
