@@ -19,7 +19,7 @@ namespace SortingSearchingApp
             bool exit = false;
             while (!exit)
             {
-                Console.WriteLine(" Sorting and Searching Menu");
+                Console.WriteLine("6 Sorting and Searching Menu");
                 Console.WriteLine("1. Display numbers");
                 Console.WriteLine("2. Bubble Sort");
                 Console.WriteLine("3. Selection Sort");
