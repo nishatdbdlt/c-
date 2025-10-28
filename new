@@ -1,0 +1,26 @@
+using System;
+
+class Employee
+{
+    public string Name;
+    public double BaseSalary;
+    public double Bonus;
+    public double TotalSalary => BaseSalary + Bonus;
+    public void Display() => Console.WriteLine($"{Name}, Total Salary: {TotalSalary}");
+}
+
+class Program
+{
+    static void Main()
+    {
+        Employee emp = new Employee();
+        Console.Write("Enter Employee Name: ");
+        emp.Name = Console.ReadLine();
+        Console.Write("Enter Base Salary: ");
+        emp.BaseSalary = double.Parse(Console.ReadLine());
+        Console.Write("Enter Bonus: ");
+        emp.Bonus = double.Parse(Console.ReadLine());
+
+        emp.Display();
+    }
+}
